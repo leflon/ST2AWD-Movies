@@ -34,6 +34,8 @@ Add your TMDB API key:
 VITE_PUBLIC_TMDB_API_KEY=your_tmdb_api_key_here
 ```
 
+> **Your API key WILL BE EXPOSED and accessible through dev tools. If you care about it, do not use this project.**
+
 Get your API key from [The Movie Database (TMDB)](https://www.themoviedb.org/settings/api).
 
 ### Start Development Server

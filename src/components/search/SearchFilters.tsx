@@ -26,8 +26,6 @@ interface SearchFiltersProps {
   onFilterChange: (newFilters: Partial<SearchFilters>) => void;
   /** Callback to clear all filters */
   onClearFilters: () => void;
-  /** Current search query for context */
-  query: string;
 }
 
 /**
@@ -65,7 +63,6 @@ export default function SearchFilters({
   onToggleFilters,
   onFilterChange,
   onClearFilters,
-  query,
 }: SearchFiltersProps) {
   return (
     <>

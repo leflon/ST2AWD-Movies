@@ -1,5 +1,5 @@
 import { Globe } from 'lucide-react';
-import { formatMoney } from '../lib/utils';
+import { formatMoney } from '../../lib/utils';
 
 type BaseDetailsProps = {
   homepage?: string;

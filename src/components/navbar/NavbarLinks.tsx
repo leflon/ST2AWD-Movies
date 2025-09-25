@@ -1,14 +1,11 @@
 import { Link } from 'react-router';
 import { Heart } from 'lucide-react';
-import { useFavorites } from '../../contexts/FavoritesContext';
 
 /**
  * Navigation links component for the navbar
  * Displays Home and Favorites links with favorites counter
  */
 export default function NavbarLinks() {
-  const { favorites } = useFavorites();
-
   return (
     <div className='flex items-center gap-4'>
       <Link

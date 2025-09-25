@@ -187,7 +187,6 @@ export default function Search() {
           onToggleFilters={handleToggleFilters}
           onFilterChange={handleFilterChange}
           onClearFilters={handleClearFilters}
-          query={query}
         />
 
         {/* Search Results */}
