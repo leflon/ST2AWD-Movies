@@ -1,0 +1,129 @@
+@import 'tailwindcss';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Default (light) theme variables */
+:root {
+  --color-text: oklch(13.42% 0.056 352.48);
+  --color-background: oklch(96.86% 0.018 351.14);
+  --color-primary: oklch(64.06% 0.253 1.78);
+  --color-secondary: oklch(86.75% 0.107 76.03);
+  --color-accent: oklch(92.3% 0.168 102.17);
+}
+
+/* Dark theme variables */
+.dark {
+  --color-text: #ffe5f1;
+  --color-background: #0f0006;
+  --color-primary: #eb0570;
+  --color-secondary: #7c4c03;
+  --color-accent: #b09c03;
+}
+
+/* Ensure light theme is explicit */
+.light {
+  --color-text: oklch(13.42% 0.056 352.48);
+  --color-background: oklch(96.86% 0.018 351.14);
+  --color-primary: oklch(64.06% 0.253 1.78);
+  --color-secondary: oklch(86.75% 0.107 76.03);
+  --color-accent: oklch(92.3% 0.168 102.17);
+}
+
+@theme {
+  --color-text: var(--color-text);
+  --color-background: var(--color-background);
+  --color-primary: var(--color-primary);
+  --color-secondary: var(--color-secondary);
+  --color-accent: var(--color-accent);
+}
+
+body {
+  @apply bg-background text-text;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* Smooth transitions */
+* {
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+/* Utility classes */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Custom utility classes */
+.bg-surface {
+  background-color: color-mix(
+    in srgb,
+    var(--color-background) 95%,
+    var(--color-text) 5%
+  );
+}
+
+.bg-surface-hover {
+  background-color: color-mix(
+    in srgb,
+    var(--color-background) 90%,
+    var(--color-text) 10%
+  );
+}
+
+.text-muted {
+  color: color-mix(in srgb, var(--color-text) 60%, var(--color-background) 40%);
+}
+
+.border-subtle {
+  border-color: color-mix(
+    in srgb,
+    var(--color-text) 20%,
+    var(--color-background) 80%
+  );
+}
+
+.shadow-surface {
+  box-shadow: 0 4px 6px -1px
+    color-mix(in srgb, var(--color-text) 10%, transparent 90%);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: color-mix(
+    in srgb,
+    var(--color-background) 95%,
+    var(--color-text) 5%
+  );
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: color-mix(
+    in srgb,
+    var(--color-text) 30%,
+    var(--color-background) 70%
+  );
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: color-mix(
+    in srgb,
+    var(--color-text) 40%,
+    var(--color-background) 60%
+  );
+}
