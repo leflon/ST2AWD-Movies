@@ -14,8 +14,7 @@ export default function EmptyFavorites() {
           No Favorites Yet
         </h1>
         <p className='text-gray-600 dark:text-gray-400'>
-          Start adding movies and TV shows to your favorites to see them
-          here!
+          Start adding movies and TV shows to your favorites to see them here!
         </p>
       </div>
       <Link

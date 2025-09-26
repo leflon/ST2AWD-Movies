@@ -50,9 +50,7 @@ export default function FavoriteStats({ favorites }: FavoriteStatsProps) {
           <div className='text-2xl font-bold text-primary'>
             {getMovieCount()}
           </div>
-          <div className='text-sm text-gray-600 dark:text-gray-400'>
-            Movies
-          </div>
+          <div className='text-sm text-gray-600 dark:text-gray-400'>Movies</div>
         </div>
         <div className='text-center'>
           <div className='text-2xl font-bold text-primary'>

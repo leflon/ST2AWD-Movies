@@ -15,7 +15,11 @@ interface MediaPosterProps {
 /**
  * Component that displays a media poster with fallback for missing images
  */
-export default function MediaPoster({ posterPath, title, type }: MediaPosterProps) {
+export default function MediaPoster({
+  posterPath,
+  title,
+  type,
+}: MediaPosterProps) {
   return (
     <div className='flex-shrink-0'>
       <div className='w-64 mx-auto lg:mx-0'>
